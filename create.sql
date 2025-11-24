@@ -36,4 +36,4 @@ CREATE TABLE ITENS_VENDA (
     quantidade INT CHECK (quantidade > 0),
     venda_id INT REFERENCES VENDAS(venda_id),
     produto_id INT REFERENCES PRODUTOS(produto_id)
-);
+); 
