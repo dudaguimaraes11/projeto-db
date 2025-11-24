@@ -31,9 +31,9 @@ CREATE TABLE VENDAS (
 ); 
 
 CREATE TABLE ITENS_VENDA (
-    item_venda_id SERIAL PRIMARY KEY, 
+    item_venda_id SERIAL PRIMARY KEY,
     preco_unitario DECIMAL(10,2),
     quantidade INT CHECK (quantidade > 0),
-   venda_id INT REF ERENCES VENDAS(venda_id),   
-produto_id INT REFERENCES PRODUTOS(produto_id)
-); 
+    venda_id INT REFERENCES VENDAS(venda_id),
+    produto_id INT REFERENCES PRODUTOS(produto_id)
+);
